@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Flash</string>
+    <string name="greeting">Hola mundo</string>
+    <string name="greeting2">Adios mundo</string>
+</resources>

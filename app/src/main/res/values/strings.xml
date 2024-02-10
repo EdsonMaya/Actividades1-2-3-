@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flash</string>
+    <string name="greeting">Hello world</string>
+    <string name="greeting2">Bye world</string>
+</resources>
