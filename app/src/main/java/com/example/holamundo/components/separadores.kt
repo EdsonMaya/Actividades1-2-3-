@@ -4,52 +4,77 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun Bloque(numero:Int, textColor: Color, backgroundColor: Color) {
+fun Bloque2(text:String, color: Color, background:Color) {
     Box(modifier = Modifier
-        .padding(1.dp)
-        .background(backgroundColor)
-        .size(65.dp),
+        .padding(3.dp)
+        .background(background)
+        .fillMaxWidth()
+        .height(50.dp)
     ) {
-        Text(text = numero.toString(),
-          modifier = Modifier.align(Alignment.Center),
-          color = textColor,
-          fontSize = 24.sp
+        Text(
+            text = text,
+            color = color,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.align(Alignment.Center),
+            fontSize = 24.sp
         )
     }
+}
 
-    Column(
-        modifier = Modifier.height(200.dp).fillMaxWidth(),
-        verticalArrangement = Arrangement.SpaceEvenly,
-        horizontalAlignment = Alignment.End
-    ){
-        Text(text= "C1", modifier = Modifier
-            .background(Color.Yellow)
-            .weight(1f)
-        )
-
-        Text(text= "C2", modifier = Modifier
-            .background(Color.Green)
-            .weight(2f)
-        )
-
-        Text(text= "C3", modifier = Modifier
-            .background(Color.Magenta)
-            .weight(1f)
-        )
+@Composable
+fun ACT(){
+    Row(
+        modifier = Modifier.width(200.dp).background(Color(0xFFBBADA0))
+    ) {
+        Column(
+            modifier = Modifier.weight(1f)
+        ) {
+            Bloque(text = "16", color = Color(0xFFFFFFFF), background = Color(0xFFF59563))
+            Bloque(text = "128", color = Color(0xFFFFFFFF), background = Color(0xFFEDCF72))
+            Bloque(text = "32", color = Color(0xFFFFFFFF), background = Color(0xFFF67C5F))
+            Bloque(text = "16", color = Color(0xFFFFFFFF), background = Color(0xFFF59563))
+        }
+        Column(
+            modifier = Modifier.weight(1f)
+        ) {
+            Bloque(text = "", color = Color(0xFFFFFFFF), background = Color(0xFFCDC1B4))
+            Bloque(text = "16", color = Color(0xFFFFFFFF), background = Color(0xFFF59563))
+            Bloque(text = "64", color = Color(0xFFFFFFFF), background = Color(0xFFF65E3B))
+            Bloque(text = "8", color = Color(0xFFFFFFFF), background = Color(0xFFF2B179))
+        }
+        Column(
+            modifier = Modifier.weight(1f)
+        ) {
+            Bloque(text = "", color = Color(0xFFFFFFFF), background = Color(0xFFCDC1B4))
+            Bloque(text = "", color = Color(0xFFFFFFFF), background = Color(0xFFCDC1B4))
+            Bloque(text = "2", color = Color(0xFF000000), background = Color(0xFFEEE4DA))
+            Bloque(text = "8", color = Color(0xFFFFFFFF), background = Color(0xFFF2B179))
+        }
+        Column(
+            modifier = Modifier.weight(1f)
+        ) {
+            Bloque(text = "4", color = Color(0xFF000000), background = Color(0xFFEDE0C8))
+            Bloque(text = "", color = Color(0xFFFFFFFF), background = Color(0xFFCDC1B4))
+            Bloque(text = "", color = Color(0xFFFFFFFF), background = Color(0xFFCDC1B4))
+            Bloque(text = "2", color = Color(0xFF000000), background = Color(0xFFEEE4DA))
+        }
     }
 }
 

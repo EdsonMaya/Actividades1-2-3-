@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 
 @Preview(showBackground = true)
 @Composable
-fun TheRow1(){
+fun Act1(){
     Row() { //dentro de las llaves los modificaciones
         /*Aqui el contenido */
         Column(
